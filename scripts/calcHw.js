@@ -21,8 +21,8 @@ function calcAction() {
         result.style.color = "red"
     }
 
-
 }
+
 
 
 function mainCalc(str) {
@@ -48,6 +48,7 @@ function mainCalc(str) {
         let replaceNum = numbers[0] + operation + numbers[1]
         str = str.replace(replaceNum, calc(numbers, operation))
         str = str.replace("+-", "-")
+        str = str.replace("--", "+")
         plusMinusCount = str.split("+").length + str.split("-").length - 2
         plusMinusCount -= str[0] == "-" ? 1 : 0
     }
